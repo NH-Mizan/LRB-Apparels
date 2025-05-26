@@ -15,9 +15,9 @@
         <div class="col-12">
             <div class="page-title-box">
                 <div class="page-title-right">
-                    <a href="{{route('products.create')}}" class="btn btn-primary rounded-pill">Create</a>
+                    <a href="{{route('whychoose.create')}}" class="btn btn-primary rounded-pill">Create</a>
                 </div>
-                <h4 class="page-title">Product Manage</h4>
+                <h4 class="page-title">Why Choose Manage</h4>
             </div>
         </div>
     </div>       
@@ -30,7 +30,7 @@
                     <thead>
                         <tr>
                             <th>SL</th>
-                            <th>Icon</th>
+                            <th>Image</th>
                             <th>Title</th>
                             <th>Description</th>
                             <th>Status</th>
@@ -43,7 +43,7 @@
                         @foreach($show_data as $key=>$value)
                         <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$value->icon}}</td>
+                            <td><img src="{{asset($value->image)}}" class="backend-image" alt=""></td>
                             <td>{{$value->title}}</td>
                             <td>{{ Str::limit($value->description, 50) }}</td>
                           

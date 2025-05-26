@@ -44,17 +44,18 @@
                         </div>
                     </div>
                     <!-- col-end -->
-                    <div class="col-sm-12">
-                        <div class="form-group mb-3">
-                            <label for="icon" class="form-label">Title *</label>
-                            <input type="text" class="form-control @error('icon') is-invalid @enderror" name="icon"  id="icon" required="">
-                            @error('icon')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
+                    <div class="col-sm-12 mb-3">
+                                <div class="form-group">
+                                    <label for="image" class="form-label">Image *</label>
+                                    <input type="file" class="form-control @error('image') is-invalid @enderror "
+                                        name="image" value="{{ old('image') }}" id="image" required="">
+                                    @error('image')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
                     <!-- col end -->
                     <div class="col-sm-12">
                         <div class="form-group mb-3">

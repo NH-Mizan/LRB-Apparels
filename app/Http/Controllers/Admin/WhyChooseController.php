@@ -26,13 +26,33 @@ class WhyChooseController extends controller
         return view('backEnd.whychoose.create');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $this->validate($request, [
-            'icon' => 'required',
             'title' => 'required',
             'description' => 'required'
         ]);
+        // image with intervention
+        $image = $request->file('image');
+        $name =  time().'-'.$image->getClientOriginalName();
+        $name = preg_replace('"\.(jpg|jpeg|png|webp)$"', '.webp',$name);
+        $name = strtolower(preg_replace('/\s+/', '-', $name));
+        $uploadpath = 'public/uploads/whychoose/';
+        $imageUrl = $uploadpath.$name;
+        $img=Image::make($image->getRealPath());
+        $img->encode('webp', 90);
+        $width = '';
+        $height = '';
+        $img->height() > $img->width() ? $width=null : $height=null;
+        $img->resize($width, $height, function ($constraint) {
+            $constraint->aspectRatio();
+        });
+        $img->save($imageUrl);
+
         $input = $request->all();
+        $input['image'] = $imageUrl;
+        
+
         $user = WhyChoose::create($input);
         Toastr::success('Success','Data insert successfully');
         return redirect()->route('whychoose.index');
@@ -43,16 +63,38 @@ class WhyChooseController extends controller
         return view('backEnd.whychoose.edit',compact('edit_data'));
     }
 
-    public function update(Request $request){
-        
+    public function update(Request $request)
+    {
         $this->validate($request, [
-            'icon' => 'required',
-           
+            'title' => 'required',
         ]);
-
-        $input = $request->except('hidden_id');
         $update_data = WhyChoose::find($request->id);
+        $input = $request->except('files');
+        $image = $request->file('image');
+        if($image){
+            // image with intervention
+            $name =  time().'-'.$image->getClientOriginalName();
+            $name = preg_replace('"\.(jpg|jpeg|png|webp)$"', '.webp',$name);
+            $name = strtolower(preg_replace('/\s+/', '-', $name));
+            $uploadpath = 'public/uploads/whychoose/';
+            $imageUrl = $uploadpath.$name;
+            $img=Image::make($image->getRealPath());
+            $img->encode('webp', 90);
+            $width = '';
+            $height = '';
+            $img->height() > $img->width() ? $width=null : $height=null;
+            $img->resize($width, $height, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $img->save($imageUrl);
+            $input['image'] = $imageUrl;
+            File::delete($update_data->image);
+        }else{
+            $input['image'] = $update_data->image;
+        }
+
         $input['status'] = $request->status?1:0;
+
         $update_data->update($input);
 
         Toastr::success('Success','Data update successfully');

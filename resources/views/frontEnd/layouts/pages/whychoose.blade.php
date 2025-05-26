@@ -23,7 +23,7 @@
                 <!-- ICON COLUMN -->
                 <div class="col-md-6 text-center">
                     <div class="choose-icon-box wow zoomIn" data-wow-delay="0.{{ $key + 2 }}s">
-                        <i class="{{ $value->icon }}"></i>
+                        <img src="{{ $value->image }}" alt="">
                     </div>
                 </div>
 
@@ -31,7 +31,7 @@
                 <div class="col-md-6">
                     <div class="choose-content wow fadeInUp" data-wow-delay="0.{{ $key + 3 }}s">
                         <h4><i class="fa-regular fa-circle-check text-success me-2"></i> {{ $value->title }}</h4>
-                        <p>{{ $value->description }}</p>
+                        <p>{!! $value->description !!}</p>
                     </div>
                 </div>
 
