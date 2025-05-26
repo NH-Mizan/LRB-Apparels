@@ -546,6 +546,34 @@
     <script src="{{ asset('public/backEnd/') }}/assets/js/toastr.min.js"></script>
     {!! Toastr::message() !!}
     <script src="{{ asset('public/backEnd/') }}/assets/js/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.change-confirm');
+        buttons.forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default button action
+
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You want to inactivate this item!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, inactivate it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Submit the parent form
+                        this.closest('form').submit();
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+
     @yield('script')
 </body>
 

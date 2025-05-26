@@ -44,13 +44,14 @@ class WhyChooseController extends controller
     }
 
     public function update(Request $request){
+        
         $this->validate($request, [
             'icon' => 'required',
-            'title' => 'required',
-            'description' => 'required'
+           
         ]);
+
         $input = $request->except('hidden_id');
-        $update_data = WhyChoose::find($request->hidden_id);
+        $update_data = WhyChoose::find($request->id);
         $input['status'] = $request->status?1:0;
         $update_data->update($input);
 

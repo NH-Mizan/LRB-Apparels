@@ -46,8 +46,8 @@
                     <!-- col-end -->
                     <div class="col-sm-12">
                         <div class="form-group mb-3">
-                            <label for="description" class="form-label">icon*</label>
-                            <textarea type="text" class="summernote form-control @error('icon') is-invalid @enderror" name="icon" rows="6" value="{{ old('icon') }}"  id="icon"></textarea>
+                            <label for="icon" class="form-label">Title *</label>
+                            <input type="text" class="form-control @error('icon') is-invalid @enderror" name="icon"  id="icon" required="">
                             @error('icon')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

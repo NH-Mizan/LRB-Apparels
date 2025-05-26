@@ -56,7 +56,7 @@
                                     <input type="hidden" value="{{$value->id}}" name="hidden_id">       
                                     <button type="button" class="btn btn-xs  btn-secondary waves-effect waves-light change-confirm"><i class="fe-thumbs-down"></i></button></form>
                                     @else
-                                    <form method="post" action="{{route('products.active')}}" class="d-inline">
+                                    <form method="post" action="{{route('whychoose.active')}}" class="d-inline">
                                         @csrf
                                     <input type="hidden" value="{{$value->id}}" name="hidden_id">        
                                     <button type="button" class="btn btn-xs  btn-success waves-effect waves-light change-confirm"><i class="fe-thumbs-up"></i></button></form>
