@@ -307,6 +307,10 @@
                                             License</a>
                                     </li>
                                     <li>
+                                        <a href="{{ route('commitment.index') }}"><i data-feather="minus"></i>
+                                        Commitment</a>
+                                    </li>
+                                    <li>
                                         <a href="{{ route('abouts.index') }}"><i data-feather="minus"></i>
                                             About Us</a>
                                     </li>

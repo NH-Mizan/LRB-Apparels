@@ -15,7 +15,8 @@ return new class extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('image');
-            $table->steing('description');
+            $table->string('description'); 
+            $table->string('status');      
             $table->timestamps();
         });
     }
