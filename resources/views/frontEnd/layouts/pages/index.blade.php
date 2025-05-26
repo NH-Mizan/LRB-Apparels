@@ -66,9 +66,9 @@
     <!-- About LRB Apparels Section -->
     <section class="about-lrb-section wow fadeIn" data-wow-delay="0.4s" data-wow-duration="1.2s">
         <div class="container">
-            <div class="section-title">
-                <h5>LRB Apparels</h5>
-            </div>
+        <div class="license-title">
+                    <h2><span>LRB</span> Apparels </h2>
+                </div>
             <div class="row">
                 @php
                     $delay = 0.5;
@@ -125,9 +125,9 @@
         <div class="container">
             <div class="license-logo-item">
                 <div class="license-title">
-                    <h2><span>LRB</span> Apparels License</h2>
+                  <div class="license-text">  <h2 class=""><span>LRB</span> Apparels License</h2></div>
                 </div>
-                <hr>
+
                 <div class="row">
 
                     <!-- Content here -->

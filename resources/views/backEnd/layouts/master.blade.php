@@ -556,12 +556,12 @@
 
                 Swal.fire({
                     title: 'Are you sure?',
-                    text: "You want to inactivate this item!",
+                    text: "Status Update!",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, inactivate it!'
+                    confirmButtonText: 'Yes, update it!'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         // Submit the parent form

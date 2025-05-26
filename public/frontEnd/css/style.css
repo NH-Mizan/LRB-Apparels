@@ -1040,6 +1040,10 @@ ul.mobile-nav>li>a:hover {
     font-size: 40px !important;
 }
 
+.about-info {
+    text-align: center;
+}
+
 .about-info h4 {
     color: var(--secondary-color);
 }
@@ -3814,25 +3818,6 @@ ol.breadcrumb.details-page-breadcrumb {
 }
 
 
-
-
-
-.license-title h2 {
-    font-size: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.license-title h2 span {
-    background: linear-gradient(-25deg, #ff08de 0%, #00c3ff 100%);
-    color: transparent !important;
-    background-clip: text;
-
-}
-
-
 .gallery-card {
     position: relative;
     overflow: hidden;
@@ -3906,19 +3891,53 @@ ol.breadcrumb.details-page-breadcrumb {
     font-size: 1rem;
 }
 
+
+
+
+
+.license-title h2 {
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+ 
+    margin-bottom: 30px;
+}
+
+.license-title h2 span {
+    background: linear-gradient(-25deg, #ff08de 0%, #00c3ff 100%);
+    color: transparent !important;
+    background-clip: text;
+
+}
+
+.license-text {
+    text-align: center;
+    background-color: #fff;
+    padding: 0 15px;
+    width: 435px;
+    margin: 0 auto;
+}
+.license-text h2{
+
+    margin-top: -34px !important;
+
+}
+
 .license-logo-item {
-    border: 2px dotted var(--secondary-color);
+    border: 2px solid var(--secondary-color);
     padding: 10px;
     border-radius: 10px;
     margin: 40px 0;
 }
 
 .license-logo-area img {
-    height: 110px;
+height: 110px;
 }
 
 .license-logo-area {
     box-shadow: 0 2px 6px #ddd;
     margin-top: 10px;
     padding: 6px;
+   
+
 }
