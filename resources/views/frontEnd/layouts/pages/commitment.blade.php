@@ -9,6 +9,7 @@
             <div class="col-sm-12">
                 <div class="page-title">
                     <h2>Our Commitment</h2>
+                    <p>At LRB Apparels, our commitment is to provide exceptional quality, ethical practices, and unparalleled service in every aspect of the garment production process. We prioritize transparency and sustainability, working only with manufacturers who share our values of fair labor, eco-friendly materials, and innovative craftsmanship Our dedication to building long-lasting partnerships ensures that every client receives tailored solutions, timely delivery, and products that meet the highest standards. We stand by our promise to bring your designs to life with integrity, precision, and passion.</p>
                 </div>
             </div>
         </div>
