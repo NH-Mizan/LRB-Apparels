@@ -16,7 +16,7 @@
 </section>
 <!-- PAGE TITLE END -->
 
-@foreach($commitments as $key => $item)
+@foreach($commitmentdata as $key => $item)
     <div class="col-sm-4 mb-4 wow fadeInUp" data-wow-delay="0.{{ $key + 3 }}s">
         <div class="commitment-card text-center h-100 p-3">
             <img src="{{ asset($item->image) }}" class="img-fluid mb-3 rounded" alt="{{ $item->title }}">

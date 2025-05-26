@@ -61,6 +61,7 @@ Route::group(['namespace' => 'Frontend', 'middleware' => ['check_refer']], funct
     Route::get('contact', [FrontendController::class, 'contact'])->name('contact');
     Route::get('page/{slug}', [FrontendController::class, 'page'])->name('page');
     Route::get('whychoose', [FrontendController::class, 'whychoose'])->name('whychoose');
+    Route::get('commitment', [FrontendController::class, 'commitment'])->name('commitment');
 
 
 });

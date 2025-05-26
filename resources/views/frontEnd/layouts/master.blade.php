@@ -106,7 +106,7 @@
                     <li><a href="{{ route('about_us') }}"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
                     <li><a href="{{ route('whychoose') }}"><i class="fa-solid fa-angles-right"></i> Why Choose Us</a>
                     </li>
-                    <li><a href="{{ route('about_us') }}"><i class="fa-solid fa-angles-right"></i> Our Commitment</a>
+                    <li><a href="{{ route('commitment') }}"><i class="fa-solid fa-angles-right"></i> Our Commitment</a>
                     </li>
                     <li class="extra"><a href="#"><i class="fa-solid fa-angles-right"></i> Products</a>
                         <ul class="sub-menu">
