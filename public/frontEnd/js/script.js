@@ -2,34 +2,39 @@ jQuery(document).ready(function () {
     "use strict";
 
         // main slider 
-        $(".main-slider").owlCarousel({
-            items: 1,
-            loop: true,
-            dots: false,
-            autoplay: true,
-            nav: true,
-            autoplayHoverPause: false,
-            margin: 0,
-            mouseDrag: true,
-            smartSpeed: 1000,
-            autoplayTimeout: 5000,
+       $(".main-slider").owlCarousel({
+    items: 1,
+    loop: true,
+    dots: true,
+    autoplay: true,
+    nav: true,
+    autoplayHoverPause: false,
+    margin: 0,
+    mouseDrag: true,
+    smartSpeed: 1000,
+    autoplayTimeout: 5000,
 
-            // navText: ["<i class='fa-solid fa-angle-left'></i>",
-            //     "<i class='fa-solid fa-angle-right'></i>"
-            // ],
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
 
-            responsive: {
-                0: {
-                    nav: false
-                },
-                600: {
-                    nav: false
-                },
-                1000: {
-                    nav: false
-                }
-            }
-        });
+    navText: [
+        "<i class='fa-solid fa-angle-left'></i>",
+        "<i class='fa-solid fa-angle-right'></i>"
+    ],
+
+    responsive: {
+        0: {
+            nav: false
+        },
+        600: {
+            nav: false
+        },
+        1000: {
+            nav: false
+        }
+    }
+});
+
         // brand slider
     $("#brandCarousel").owlCarousel({
         items: 5,
@@ -151,15 +156,15 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.gallery-slider').owlCarousel({
         loop:true,
-        margin:30,
+        margin:20,
         nav:true,
         dots: true,
         items: 3,
         navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
         responsive:{
             0:{ items:1, nav:false, },
-            600:{ items:1 },
-            1000:{ items:2 }
+            600:{ items:2 },
+            1000:{ items:3 }
         }
     });
   });

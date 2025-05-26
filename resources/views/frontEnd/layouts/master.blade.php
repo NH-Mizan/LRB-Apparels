@@ -177,12 +177,12 @@
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0" bis_skin_checked="1">
                         <ul class="footer__data">
                             <li>
-                                <h3>Our Services</h3>
+                                <h3>Our Products</h3>
                             </li>
-                            <li><a href="#">Research and Innovation</a></li>
-                            <li><a href="#">Sourcing</a></li>
-                            <li><a href="#">Production</a></li>
-                            <li><a href="#">Quality Assurance</a></li>
+                            @foreach ($categories as $key => $value)
+                                <li><a href="{{route('category', [$value->slug])}}"></i>
+                                        {{ $value->name }}</a></li>
+                            @endforeach
                         </ul>
                     </div>
 
@@ -193,9 +193,9 @@
                                 <h3>Quick Links</h3>
                             </li>
                             <li><a href="{{ route('about_us') }}">About Us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Products</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="whychoose">Why choose us</a></li>
+                            <li><a href="contact">contact us</a></li>
+                            <li><a href="">Feedback</a></li>
                         </ul>
                     </div>
 

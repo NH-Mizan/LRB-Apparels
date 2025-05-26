@@ -67,7 +67,7 @@
     <section class="about-lrb-section wow fadeIn" data-wow-delay="0.4s" data-wow-duration="1.2s">
         <div class="container">
         <div class="license-title">
-                    <h2><span>LRB</span> Apparels </h2>
+                    <h2>LRB<span> Apparels</span> </h2>
                 </div>
             <div class="row">
                 @php

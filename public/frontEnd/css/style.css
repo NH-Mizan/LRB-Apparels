@@ -628,6 +628,8 @@ ul.mobile-nav>li>a:hover {
     border-bottom: 1px solid #ddd;
     margin-bottom: 20px;
 }
+/* Make arrows stand out */
+
 
 
 /*==== SLIDER CSS END ====  */
@@ -3208,6 +3210,8 @@ figure.counter-icon img {
 .gallery-area {
     position: relative;
     border: 2px solid var(--secondary-color);
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .gallery-area ::after {
@@ -3216,13 +3220,14 @@ figure.counter-icon img {
     position: absolute;
     height: 100%;
     width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     top: 1000px;
-    background-color: #2925257c;
+    background-color: #4043eae1;
     color: #ffff;
     transition: all 0.4s;
 }
@@ -3479,26 +3484,6 @@ figure.counter-icon img {
     border-radius: 10px;
 }
 
-.photo-gallery-wrapper {
-    padding: 20px 0 15px;
-    background: #000;
-}
-
-.photo-gallery-heading {
-    border-bottom: 2px solid #fff;
-    margin-bottom: 12px;
-}
-
-.photo-gallery-heading h2 {
-    font-size: 28px;
-    padding-bottom: 5px;
-    margin-bottom: 1px;
-    border-bottom: 1px solid #009135;
-}
-
-.photo-gallery-heading h2 a {
-    color: #fff;
-}
 
 #image-gallery li img {
     display: block;
@@ -3655,10 +3640,6 @@ ol.breadcrumb.details-page-breadcrumb {
     position: relative;
 }
 
-.img-fluid {
-    max-width: 100%;
-    height: 300px;
-}
 
 .details-content ul {
     /* width: 100%; */
@@ -3737,7 +3718,7 @@ ol.breadcrumb.details-page-breadcrumb {
     background: linear-gradient(-25deg, #ff08de 0%, #00c3ff 100%);
     color: transparent !important;
     background-clip: text;
-    text-align: left;
+    text-align: center;
 }
 
 .category-slider button.owl-prev,
@@ -3792,32 +3773,11 @@ ol.breadcrumb.details-page-breadcrumb {
 
 
 }
-
-.about-card {
-    /* border: 2px solid var(--primary-color); */
-    border-radius: 10px;
+.img-fluid {
+    max-width: 100%;
+    height:  350px;
     padding: 10px;
-    height: 320px;
-    margin-bottom: 30px;
-    box-shadow: 0px 4px 8px #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
-
-.about-card img {
-    width: 120px;
-}
-
-.about-info h4 {
-    padding: 20px 0;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
 .gallery-card {
     position: relative;
     overflow: hidden;
@@ -3861,6 +3821,31 @@ ol.breadcrumb.details-page-breadcrumb {
     cursor: pointer;
     z-index: 99;
 }
+
+.about-card {
+    /* border: 2px solid var(--primary-color); */
+    border-radius: 10px;
+    padding: 10px;
+    height: 320px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 8px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-card img {
+    width: 120px;
+}
+
+.about-info h4 {
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 .product-card {
     transition: all 0.3s ease-in-out;
