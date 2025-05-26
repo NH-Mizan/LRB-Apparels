@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CommitmentController;
 use App\Http\Controllers\admin\LicenseController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\WhyChooseController;
@@ -247,15 +248,6 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'lock', 'check_re
     Route::post('contact/active', [ContactController::class, 'active'])->name('contact.active');
     Route::post('contact/destroy', [ContactController::class, 'destroy'])->name('contact.destroy');
 
-    // banner category routes
-    Route::get('banner-category/manage', [BannerCategoryController::class, 'index'])->name('banner_category.index');
-    Route::get('banner-category/create', [BannerCategoryController::class, 'create'])->name('banner_category.create');
-    Route::post('banner-category/save', [BannerCategoryController::class, 'store'])->name('banner_category.store');
-    Route::get('banner-category/{id}/edit', [BannerCategoryController::class, 'edit'])->name('banner_category.edit');
-    Route::post('banner-category/update', [BannerCategoryController::class, 'update'])->name('banner_category.update');
-    Route::post('banner-category/inactive', [BannerCategoryController::class, 'inactive'])->name('banner_category.inactive');
-    Route::post('banner-category/active', [BannerCategoryController::class, 'active'])->name('banner_category.active');
-    Route::post('banner-category/destroy', [BannerCategoryController::class, 'destroy'])->name('banner_category.destroy');
 
     // banner  routes
     Route::get('banner/manage', [BannerController::class, 'index'])->name('banners.index');
@@ -298,7 +290,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'lock', 'check_re
     Route::post('product/active', [ProductController::class, 'active'])->name('products.active');
     Route::post('product/destroy', [ProductController::class, 'destroy'])->name('products.destroy');
 
-    // Products
+    // Why Choose 
     Route::get('whychoose/manage', [WhyChooseController::class, 'index'])->name('whychoose.index');
     Route::get('whychoose/create', [WhyChooseController::class, 'create'])->name('whychoose.create');
     Route::post('whychoose/store', [WhyChooseController::class, 'store'])->name('whychoose.store');
@@ -309,7 +301,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'lock', 'check_re
     Route::post('whychoose/destroy', [whychooseController::class, 'destroy'])->name('whychoose.destroy');
 
 
-
+// Licese Logo 
     Route::get('license/manage', [LicenseController::class, 'index'])->name('license.index');
     Route::get('license/create', [LicenseController::class, 'create'])->name('license.create');
     Route::post('license/store', [LicenseController::class, 'store'])->name('license.store');
@@ -318,4 +310,14 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'lock', 'check_re
     Route::post('license/inactive', [LicenseController::class, 'inactive'])->name('license.inactive');
     Route::post('license/active', [LicenseController::class, 'active'])->name('license.active');
     Route::post('license/destroy', [LicenseController::class, 'destroy'])->name('license.destroy');
+
+    // commitment
+    Route::get('commitment/manage', [CommitmentController::class, 'index'])->name('commitment.index');
+    Route::get('commitment/create', [CommitmentController::class, 'create'])->name('commitment.create');
+    Route::post('commitment/store', [CommitmentController::class, 'store'])->name('commitment.store');
+    Route::get('commitment/{id}/edit', [CommitmentController::class, 'edit'])->name('commitment.edit');
+    Route::post('commitment/update', [CommitmentController::class, 'update'])->name('commitment.update');
+    Route::post('commitment/inactive', [CommitmentController::class, 'inactive'])->name('commitment.inactive');
+    Route::post('commitment/active', [CommitmentController::class, 'active'])->name('commitment.active');
+    Route::post('commitment/destroy', [CommitmentController::class, 'destroy'])->name('commitment.destroy');
 });
