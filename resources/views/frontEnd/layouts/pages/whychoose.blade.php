@@ -15,26 +15,32 @@
     </div>
 </section>
 <!-- PAGE TITLE END -->
-
 <section class="product-section wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1.2s">
     <div class="container">
-        <div class="row">
-            @foreach ($choosedata as $key => $value)
-                <div class="col-sm-6 col-lg-3">
-                    <div class="about-card wow zoomIn" data-wow-delay="0.{{ $key + 3 }}s" data-wow-duration="1s">
-                        <div class="choose-icon">
-                            <i class="{{ $value->icon }}"></i>
-                        </div>
-                        <div class="about-info">
-                            <h4><i class="fa-regular fa-circle-check"></i> {{ $value->title }}</h4>
-                            <p>{{ $value->description }}</p>
-                        </div>
+        @foreach ($choosedata as $key => $value)
+            <div class="row align-items-center mb-5 flex-wrap {{ $key % 2 == 0 ? 'flex-row-reverse' : '' }}">
+                
+                <!-- ICON COLUMN -->
+                <div class="col-md-6 text-center">
+                    <div class="choose-icon-box wow zoomIn" data-wow-delay="0.{{ $key + 2 }}s">
+                        <i class="{{ $value->icon }}"></i>
                     </div>
                 </div>
-            @endforeach
-        </div>
+
+                <!-- CONTENT COLUMN -->
+                <div class="col-md-6">
+                    <div class="choose-content wow fadeInUp" data-wow-delay="0.{{ $key + 3 }}s">
+                        <h4><i class="fa-regular fa-circle-check text-success me-2"></i> {{ $value->title }}</h4>
+                        <p>{{ $value->description }}</p>
+                    </div>
+                </div>
+
+            </div>
+        @endforeach
     </div>
 </section>
+
+
 
 @endsection
 
