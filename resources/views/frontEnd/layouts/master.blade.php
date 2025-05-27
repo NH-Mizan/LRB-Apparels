@@ -121,7 +121,7 @@
                     <li><a href="{{ route('about_us') }}"><i class="fa-solid fa-angles-right"></i> Client Assessment</a>
                     </li>
                     <li><a href="{{ route('contact') }}"><i class="fa-solid fa-angles-right"></i> Contact Us</a></li>
-                    <li><a href="{{ route('about_us') }}"><i class="fa-solid fa-angles-right"></i> Leave website
+                    <li><a href="{{ route('feedback') }}"><i class="fa-solid fa-angles-right"></i> Leave website
                             feedback</a></li>
 
 
@@ -222,7 +222,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="copyright">
-                            <p> Copyright © <span>Essencia Sourcing</span> All rights reserved. Design &amp; Developed
+                            <p> Copyright © <span>LRB Apparels</span> All rights reserved. Design &amp; Developed
                                 By<a href="https://websolutionit.com/" target="_blank"> <span> Websolution IT</span></a>
                             </p>
                         </div>

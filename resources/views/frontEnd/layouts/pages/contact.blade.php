@@ -27,7 +27,7 @@
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
+                            </div>0
                         </div>
                     </div>
                     <div class="col-sm-8">

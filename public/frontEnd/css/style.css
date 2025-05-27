@@ -3958,4 +3958,22 @@ height: 110px;
     font-size: 1rem;
     line-height: 1.6;
 }
-
+.feedback-section {
+    background-color: #f9f9f9;
+}
+.feedback-card {
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #e0e0e0;
+}
+.feedback-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.feedback-desc {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+}
+.owl-carousel .owl-item {
+    padding: 15px 5px;
+}

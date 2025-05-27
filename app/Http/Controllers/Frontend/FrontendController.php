@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Models\Brand;
 use App\Models\Commitment;
+use App\Models\Feedback;
 use App\Models\License;
 use App\Models\Product;
 use App\Models\WhyChoose;
@@ -61,6 +62,10 @@ class FrontendController extends Controller
     public function commitment(){
         $commitmentdata = Commitment::where('status',1)->orderBy('id','DESC')->get();
         return view('frontEnd.layouts.pages.commitment',compact('commitmentdata'));
+    }
+    public function feedback(){
+        $feedbackdata = Feedback::where('status',1)->orderBy('id','DESC')->get();
+        return view('frontEnd.layouts.pages.feedback',compact('feedbackdata'));
     }
     public function gallerydetails($id){
         $breadcrumb = Gallery::where(['id'=>$id,'status'=>1])

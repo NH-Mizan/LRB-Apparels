@@ -33,7 +33,7 @@
                     <div class="col-sm-12">
                         <div class="form-group mb-3">
                             <label for="name" class="form-label">Name *</label>
-                            <input type="text" class="form-control @error('title') is-invalid @enderror" name="name" value="{{ old('name') }}" id="name" required="">
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" id="name" required="">
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -42,6 +42,8 @@
                         </div>
                     </div>
                     <!-- col-end -->
+
+                    
                     <div class="col-sm-12 mb-3">
                         <div class="form-group">
                             <label for="image" class="form-label">Image *</label>

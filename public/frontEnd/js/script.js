@@ -168,6 +168,20 @@ $(document).ready(function(){
         }
     });
   });
+  $(document).ready(function(){
+    $(".feedback-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 15,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 1000,
+        responsive:{
+            768:{ items: 1 },
+            992:{ items: 1 }
+        }
+    });
+});
 
 
 

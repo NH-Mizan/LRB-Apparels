@@ -319,6 +319,10 @@
                                         <a href="{{ route('whychoose.index') }}"><i data-feather="minus"></i>
                                             Why Choose </a>
                                     </li>
+                                    <li>
+                                        <a href="{{ route('feedback.index') }}"><i data-feather="minus"></i>
+                                            FeedBack </a>
+                                    </li>
                                    
                          
                                     <li>
