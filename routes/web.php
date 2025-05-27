@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CommitmentController;
+use App\Http\Controllers\Admin\FeedbackController;
 use App\Http\Controllers\admin\LicenseController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\WhyChooseController;
@@ -62,6 +63,7 @@ Route::group(['namespace' => 'Frontend', 'middleware' => ['check_refer']], funct
     Route::get('page/{slug}', [FrontendController::class, 'page'])->name('page');
     Route::get('whychoose', [FrontendController::class, 'whychoose'])->name('whychoose');
     Route::get('commitment', [FrontendController::class, 'commitment'])->name('commitment');
+    Route::get('feedback', [FrontendController::class, 'feedback'])->name('feedback');
 
 
 });
@@ -321,4 +323,13 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['auth', 'lock', 'check_re
     Route::post('commitment/inactive', [CommitmentController::class, 'inactive'])->name('commitment.inactive');
     Route::post('commitment/active', [CommitmentController::class, 'active'])->name('commitment.active');
     Route::post('commitment/destroy', [CommitmentController::class, 'destroy'])->name('commitment.destroy');
+    // feedback
+    Route::get('feedback/manage', [FeedbackController::class, 'index'])->name('feedback.index');
+    Route::get('feedback/create', [FeedbackController::class, 'create'])->name('feedback.create');
+    Route::post('feedback/store', [FeedbackController::class, 'store'])->name('feedback.store');
+    Route::get('feedback/{id}/edit', [FeedbackController::class, 'edit'])->name('feedback.edit');
+    Route::post('feedback/update', [FeedbackController::class, 'update'])->name('feedback.update');
+    Route::post('feedback/inactive', [FeedbackController::class, 'inactive'])->name('feedback.inactive');
+    Route::post('feedback/active', [FeedbackController::class, 'active'])->name('feedback.active');
+    Route::post('feedback/destroy', [FeedbackController::class, 'destroy'])->name('feedback.destroy');
 });
